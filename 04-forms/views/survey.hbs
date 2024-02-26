@@ -1,0 +1,46 @@
+{{#extends "base"}}
+    {{#block "content"}}
+        <h1> Survey form </h1>
+        <form method="POST">
+            <div>
+                <label> First Name</label>
+                <input type="text" name="firstName" class="form-control"/>
+            </div>
+            <div>
+                <label> Last Name</label>
+                <input type="text" name="lastName" class="form-control"/>
+            </div>
+            <div>
+                <div>
+                    <label>
+                        Gender
+                    </label>
+                </div>
+                <input type="radio" name="gender" value="male"> <label> Male</label>
+                <input type="radio" name="gender" value="female"> <label> Female </label>
+            </div>
+                {{!-- in radio name is the key, value is the value --}}
+            <div>
+                <label> Hobbies </label>
+                <input type="checkbox" name="hobbies" value="cycling"> <label> Cycling </label>
+                <input type="checkbox" name="hobbies" value="jumping"> <label> Jumping </label>
+                <input type="checkbox" name="hobbies" value="milking-a-cow"> <label> Milk a cow </label>
+                {{!-- three cases, user never add any, it returns "", if check one it returns a string, if check multiple, req.body is [element1, element2] --}}
+            </div>
+            <div>
+                <label> Country </label>
+                <select name="country" class="form-control"> 
+                    <option value="singapore"> Singapore </option>
+                    <option value="malaysia"> Malaysia </option>
+                    <option value="thailand"> Thailand </option>
+                </select>
+            </div>
+            {{!-- similarly name is the key returned later, also write the value in lower case so that it is easier to process later in backend --}}
+            <input type="submit" />
+            
+        </form>
+        {{!-- name attribute of input form will give it the firstName key in the object --}}
+    {{/block}}
+
+
+{{/extends}}

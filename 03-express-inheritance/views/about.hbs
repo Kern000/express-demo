@@ -1,0 +1,16 @@
+{{!-- so rather than duplicating navbar, we will inherit from base --}}
+
+{{#extends "base"}}
+{{#block "title"}}
+    about us
+{{/block}}
+
+{{#block "content"}}
+    <h1> About us </h1>
+    <form>
+        <label> Tell us about us</label>
+        <input type="text" /> 
+        <input type="submit" />
+    </form>
+{{/block}}
+{{/extends}}

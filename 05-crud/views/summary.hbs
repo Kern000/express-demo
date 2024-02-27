@@ -1,0 +1,19 @@
+{{#extends "base"}}
+
+{{#block "content"}}
+    <h1> THank you for your participation</h1>
+    <ul class="list-group">
+        <li class="list-group-item">first Name {{firstName}}</li>
+        <li class="list-group-item">Last Name {{lastName}}</li>
+        <li class="list-group-item">Gender {{gender}}</li>
+        <h1> Hobbies </h1>
+            <ul>
+                {{#each hobbies}}
+                    <li class="list-group-item"> {{this}} </li>
+                {{/each}}
+            </ul>
+        <h1> Country </h1>
+        <li class="list-group-item"> {{country}}</li>
+{{/block}}
+
+{{/extends}}
